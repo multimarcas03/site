@@ -1,0 +1,105 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página centralizado */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Logo principal (no header) e logo secundária */
+.logo,
+.logo-concurso,
+.logo-secundaria {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  align-content: center;
+}
+
+/* Container central */
+.container {
+  background-color: white ;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Título principal */
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Parágrafo de instrução */
+p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Botão de ação */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0057b8;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #003f8a;
+}
+/* Estilo do formulário */
+.formulario {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario input,
+.formulario button {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Botão do formulário */
+.formulario button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.formulario button:hover {
+  background-color: #1e7e34;
+}
+.mensagem {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+  border-radius: 5px;
+  font-size: 1rem;
+}
